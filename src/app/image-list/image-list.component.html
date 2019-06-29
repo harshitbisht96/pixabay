@@ -34,8 +34,15 @@
 
 
     <div class='blur col-md-4'> 
+        <a href="{{image.largeImageURL}}" target="_blank">
       <img class='image' align="center" src="{{ image.webformatURL }}" width='600' height='200' >
+      
+        <div class="middle">
+         <div class="text">Go to image URL</div>
+        </div>
+      </a>
       <div class="badge badge-info">{{ image.tags }}</div> by <i>{{ image.user }}</i>   
+     
     </div>
 
 

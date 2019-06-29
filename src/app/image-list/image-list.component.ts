@@ -34,6 +34,7 @@ export class ImageListComponent implements OnInit {
   searchImages(query:string)
   {
     console.log(query);
+    localStorage.setItem("searchKey",query);
     this.searching= true;
     console.log(this.searching);
     return this._imageService.getImage(query).subscribe( data=> this.handleSuccess(data),
@@ -42,6 +43,11 @@ export class ImageListComponent implements OnInit {
   }
 
   ngOnInit() {
+    const val=localStorage.getItem("searchKey");
+    if(val!=null)
+    {
+        this.searchImages(val);
+    }
   }
 
 }
