@@ -1,0 +1,12 @@
+.blur:hover .image {
+    opacity: 0.3;
+  }
+  
+.blur:hover  {
+    opacity: 1;
+  }
+.image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
