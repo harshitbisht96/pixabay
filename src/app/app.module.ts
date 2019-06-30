@@ -10,6 +10,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

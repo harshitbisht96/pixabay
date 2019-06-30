@@ -41,22 +41,22 @@ export class ImageListComponent implements OnInit {
     // elem.setAttribute("data-target","#"+idx.toString());
   }
 
-  // searchImages(query:string)
-  // {
-  //   console.log(query);
-  //   localStorage.setItem("searchKey",query);
-  //   this.searching= true;
-  //   console.log(this.searching);
-  //   return this._imageService.getImage(query).subscribe( data=> this.handleSuccess(data),
-  //   error =>this.handleError(error),
-  //   () => this.searching=false );
-  // }
+  searchImages(query:string)
+  {
+    console.log(query);
+    localStorage.setItem("searchKey",query);
+    this.searching= true;
+    console.log(this.searching);
+    return this._imageService.getImage(query).subscribe( data=> this.handleSuccess(data),
+    error =>this.handleError(error),
+    () => this.searching=false );
+  }
 
   ngOnInit() {
     const val=localStorage.getItem("searchKey");
     if(val!=null)
     {
-      // this.searchImages(val);
+      this.searchImages(val);
     }
   }
 
