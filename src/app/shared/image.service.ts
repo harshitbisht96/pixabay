@@ -8,8 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   })
 export class ImageService{
     private query: string;
-    private API_KEY: string=environment.PIXABAY_API_KEY;
-    private API_URL: string=environment.PIXABAY_API_URL;
+    private API_KEY: string='12695162-34ae3d2d4d59b34c745554744';
+    private API_URL: string='https://pixabay.com/api/?key=';
     private URL: string= this.API_URL+ this.API_KEY+'&q=';
 
     constructor(private _http: HttpClient){}
