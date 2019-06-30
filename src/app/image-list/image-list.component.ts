@@ -11,12 +11,22 @@ export class ImageListComponent implements OnInit {
   imagesFound:boolean=false;
   searching: boolean = false;
 
+
   constructor( private _imageService : ImageService) { }
 
   handleSuccess(data:any){
-    this.imagesFound=true;
+    // this.imagesFound=true;
     this.images=data.hits;
+    if(this.images.length>0)
+    {
+      this.imagesFound=true;
+    }
+    else{
+      this.imagesFound=false;
+    }
     console.log(data.hits);
+    console.log(this.imagesFound);
+    // console.log(this.images.length)
   }
 
   handleError(error: any){
@@ -46,7 +56,7 @@ export class ImageListComponent implements OnInit {
     const val=localStorage.getItem("searchKey");
     if(val!=null)
     {
-        this.searchImages(val);
+      this.searchImages(val);
     }
   }
 

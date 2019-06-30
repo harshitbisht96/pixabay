@@ -26,6 +26,10 @@
   </div>
 </div>
 <div *ngIf="!searching">
+  <div *ngIf="!imagesFound">
+    <h1> No images found </h1>
+  </div>
+  <div *ngIf="imagesFound">
 <div *ngFor="let image of images" class="image-container">
 
   
@@ -51,6 +55,7 @@
     <div class='col-md-4'></div>
   </div>
   <br>
+</div>
 </div>
 </div>
 </div>
