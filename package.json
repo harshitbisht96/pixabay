@@ -9,7 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "run-watch": "ng build && node server/server.js",
-    "preinstall": "npm install -g @angular/cli",
     "postinstall": "ng build --prod",
     "watch": "npm-watch"
   },
